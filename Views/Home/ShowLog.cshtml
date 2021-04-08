@@ -1,0 +1,32 @@
+﻿@model System.Collections.Generic.List<string>
+
+@{
+    ViewBag.Title = "Show Log";
+}
+
+<h4>
+    <b>Log Entries</b>
+
+    <a class="btn btn-primary pull-right" href="~/Home/Reload">Refresh</a>
+    @if (ViewBag.IsMyLog != null && ViewBag.IsMyLog)
+    {
+        <a class="btn btn-primary pull-right" href="~/Home/Clear" style="margin-right: 5px">Clear</a>
+        <a class="btn btn-primary pull-right" href="~/Home/Download" style="margin-right: 5px">Download</a>
+    }
+</h4>
+
+@if (Model.Count > 0)
+{
+    foreach (var line in Model)
+    {
+        <span>
+            @Html.Raw(Html.Encode(line).Replace("\n", "<br />").Replace("\t", "&nbsp;"))
+        </span>
+        <br />
+        <br />
+    }
+}
+else
+{
+    <span>No log entries found.</span>
+}

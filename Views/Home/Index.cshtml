@@ -1,0 +1,28 @@
+﻿@model float
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+
+@using (@Html.BeginForm("Result", "Home", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "dvCategoryResults" }))
+{
+    <input type="number" name="num1" min="0" class="form-control" style="margin-bottom: 5px" placeholder="First Number" required />
+    <input type="number" name="num2" min="0" class="form-control" placeholder="Second Number" required />
+
+    <br />
+
+    <input type="submit" value="add" name="op" class="btn btn-primary" />
+    <input type="submit" value="subtract" name="op" class="btn btn-primary" />
+    <input type="submit" value="multiply" name="op" class="btn btn-primary" />
+    <input type="submit" value="divide" name="op" class="btn btn-primary" />
+}
+
+<fieldset>
+    <div id="dvCategoryResults">
+        @Html.Partial("Result", Model)
+    </div>
+</fieldset>
