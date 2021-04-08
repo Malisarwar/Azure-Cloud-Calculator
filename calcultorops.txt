@@ -1,0 +1,6 @@
+
+IP: ::1		Timestamp: 3/29/2021 3:21:29 PM		Operation: add		Num1: 11		Num2: 1		Result: 12
+IP: ::1		Timestamp: 4/1/2021 4:12:52 PM		Operation: Divide		Num1: 11		Num2: 2		Result: 13
+IP: ::1		Timestamp: 4/1/2021 4:13:12 PM		Operation: Divide		Num1: 11		Num2: 2		Result: 13
+IP: ::1		Timestamp: 4/1/2021 4:13:23 PM		Operation: divide		Num1: 11		Num2: 2		Result: 5.5
+IP: 		Timestamp: 4/5/2021 9:24:49 PM		Operation: add		Num1: 11		Num2: 3		Result: 14
